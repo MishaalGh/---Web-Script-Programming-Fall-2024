@@ -1,0 +1,58 @@
+<!-- Name: Mishaal Ghumman -->
+<!-- Student ID: 100831093 -->
+<!-- Date: October 5th, 2024 -->
+<!-- Purpose: This page is the contact page where users can subbmit their contact info to me throught the form. -->
+
+<!--Start of contact HTML-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- HTML Character encoding. Basically press ! then tab or the basic encoding and layout. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- used to make it respoonsive for mobile and desktop/laptop.-->
+    <title>Contact Mishaal</title> <!-- Tab tittle -->
+    <link rel="stylesheet" href="style.css"> <!-- This is to link my HTML to the css file called style.css -->
+</head>
+<body>
+    <!-- Start of the contact section -->
+    <section id="contactMe"> 
+        <div class="contact"> <!-- wrapper div used for content, and using classes here to arrange and style -->
+            <div>
+                <a href="index.html" type="button" class="cta">Home</a> <!-- Button creation for it main function to return to home page. But this time its above the tittle to serve as a navagation bar. -->
+                <a href="contact.html" type="button" class="cta">Contact Me</a> <!-- Button creation for it main function to return to contact page -->
+                <a href="AboutMe.html" type="button" class="cta">About Me</a> <!-- Button creation for it main function to return to about me page-->
+                <a href="Projects.html" type="button" class="cta">Projects</a> <!-- Button creation for it main function to return to projects page -->
+                
+                <h1 class="anton-sc-regular">Get In Contact<span></span></h1> <!-- Heading for the contact section -->
+
+                <form id="contactForm" class="contact-form"> <!-- Contact form for user input -->
+                    <div class="form-group"> <!-- Grouping for the name input field -->
+                        <label for="name">Name:</label> <!-- Setting the label for the name input -->
+                        <input type="text" id="name" name="name" required placeholder="Your Name"> <!-- This accepts input for the name feil -->
+                    </div>
+                    <div class="form-group"> <!-- we must group for the email field -->
+                        <label for="email">Email:</label> <!-- email input and label -->
+                        <input type="email" id="email" name="email" required placeholder="Your Email"> <!-- Takes user input for email and leaves the empty box with text -->
+                    </div>
+                    <div class="form-group"> <!-- we must group for the number field -->
+                        <label for="phone">Cell No:</label> <!-- phone number input and label -->
+                        <input type="tel" id="phone" name="phone" required placeholder="Your Cell Number"> <!-- Takes user input for number and leaves the empty box with text -->
+                    </div>
+                    <div class="form-group"> <!-- Grouping for the comments text area -->
+                        <label for="comments">Comments:</label> <!-- comments input and label -->
+                        <textarea id="comments" name="comments" rows="4" required placeholder="Your Comments"></textarea> <!-- Takes user input for comments and leaves the empty box with text -->
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button> <!-- Button thats made for submmiting for users -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer> <!-- Start of the footer section/creating footer for the About me page -->
+        <div class="footer-content"> <!-- Container for the footer content -->
+            <p>Email: <a href="mailto:mishaal.ghumman@ontariotechu.net">mishaal.ghumman@ontariotechu.net</a></p> <!-- My personal school email -->
+            <p>&copy; 2024 Mishaal.G</p> <!-- Copyright notice -->
+        </div>
+    </footer> <!--End of the footer section/creating footer for the About me page-->
+</body>
+</html>
+<!--End of Contact HTML-->

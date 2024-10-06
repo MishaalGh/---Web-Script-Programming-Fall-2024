@@ -1,0 +1,67 @@
+<!--Name:Mishaal Ghumman-->
+<!--Student ID: 100831093-->
+<!--Date: October, 5th, 2024-->
+<!--Start of About me HTML-->
+<!--Purpose: This is the about me webpage that aslo host a navagation bar t hat leads to any of the other content pages. It will show my intrests, images, contact info and 
+generally a breif summar of me.-->
+
+<!--Start of About me HTML-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- HTML Character encoding. Basically press ! then tab or the basic encoding and layout. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- used to make it respoonsive for mobile and desktop/laptop.-->
+    <title>Mishaal's Portfolio About Me</title> <!-- Tab tittle -->
+    <link rel="stylesheet" href="style.css"> <!-- This is to link my HTML to the css file called style.css -->
+</head>
+<body>
+    <section id="About"> <!-- Start of the about me section -->
+        <div class="about page"> <!-- wrapper div used for content, and using classes here to arragne and style -->
+            <div>
+                <a href="index.html" type="button" class="cta">Home</a> <!-- Button creation for it main function to return to home page. But this time its above the tittle to serve as a navagation bar. -->
+                <a href="contact.html" type="button" class="cta">Contact Me</a> <!-- Button creation for it main function to return to contact page -->
+                <a href="AboutMe.html" type="button" class="cta">About Me</a> <!-- Button creation for it main function to return to about me page-->
+                <a href="Projects.html" type="button" class="cta">Projects</a> <!-- Button creation for it main function to return to projects page -->
+            </div>
+
+                <h1 class="anton-sc-regular">The About Me Page<span></span></h1> <!-- Main heading for the About Me page -->
+                
+                <img src="me.jpg" alt="Image of Me" class="about-image"> <!-- A picture of me Profile alt text for accessibility so the stytle files is easier to manage. 
+                A baby photo since I put the actual photo of me now in the video -->
+
+                <div class="content-wrapper"> <!-- Container to organazie the content on this page(video, thumbnail, title, etc) -->
+                    
+                    <div class="about-text"> <!-- Creating a container for the following text -->
+                        <h2 class="paragraph-title">About Me</h2> <!-- Subheading for the about me paragraph -->
+                        <p>
+                            Hi, My name is Mishaal Ghumman a few things about me are that I was born 
+                            and raised in Canada, and I'm currently 22. I’m pursuing a bachelor's in 
+                            networking and IT security, hoping to break into the cyber security field 
+                            after University. Some of my interests include PC building, Cyber security,
+                            gaming, UFC, and much more.
+                        </p>
+                    </div>
+                    
+                    <div class="about-video-wrapper"> <!-- Container for the video section -->
+
+                        <video class="about-video" controls poster="thumbnail.png"> <!-- Provides image for video thumbnail -->
+                            <source src="About Me video.mp4" type="video/mp4"> <!-- Location and sourcer of the video about me -->
+                            Your browser does not support the video tag. <!-- Notice for brosers that don't support this -->
+                        </video>
+                    </div>
+
+                </div> <!-- End of content wrapper -->
+
+            </div>
+        </div>
+    </section> <!-- End of the About Me section -->
+
+    <footer> <!-- Start of the footer section/creating footer for the About me page -->
+        <div class="footer-content"> <!-- div thats used for footer content and wrapping for its clean and proper look -->
+            <p>Email: <a href="mailto:mishaal.ghumman@ontariotechu.net">mishaal.ghumman@ontariotechu.net</a></p> <!-- My personal school email -->
+            <p>&copy; 2024 Mishaal.G</p> <!-- Copyright notice -->
+        </div>
+    </footer> <!--End of the footer section/creating footer for the About me page-->
+</body>
+</html>
+<!--End of About me HTML-->

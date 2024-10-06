@@ -1,0 +1,447 @@
+/*Name:Mishaal Ghumman*/
+/*Student ID: 100831093*/
+/*Date: October, 5th, 2024*/
+/*Purpose: This is the style CSS to screate and organioze the webpage to make it efficenit and nice*/
+
+/*Start of Style CSS*/
+
+/* Global reset and base styles */
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; /* Include padding and border in element's total width and height and remove defaults */
+}
+
+/* Setting the heights for the body of HTML elements */
+html, body {
+    height: 100%; /* Makes sure of the body taking full height from view port */
+}
+
+/* Bacis HTML styles */
+html {
+    font-size: 12px; /* Base font size set*/
+    font-family: 'Anton SC', sans-serif; /* Declaring its font family */
+    color: white; /* Set text color to white */
+    z-index: 2; /* Stack order so background does not cover it */
+}
+
+/* Anchor link style */
+a {
+    text-decoration: none; /* Underlines from links removed */
+}
+
+/* Anton SC font */
+.anton-sc-regular {
+    font-family: "Anton SC", sans-serif; /* Using the Anton SC font */
+    font-weight: 400; 
+    font-style: normal; 
+}
+
+/* Container made flex for centering content */
+.holder {
+    min-height: 100vh; /* Minimum height to fill viewport */
+    min-width: 100%; /* Full width */
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: left; /* I align to the left because personal preference and design */
+    padding-left: 40px; /* Space between content and left edge so it isnt touching and messing up fluid design */
+    position: relative; /* Relative positioning*/
+    z-index: 2; /* Forces it to appear above background image */
+}
+
+/* Styling the Home page  */
+#first {
+    position: relative; /* Position for z-index layering */
+    z-index: 1; /* Layering order to ensure nothings covered */
+    padding-left: 25px; /* Ensuring the space between content and left edge */
+    justify-content: left; /* Align content to the left */
+    background-color: rgb(41, 131, 209); /* Background color giving image a nice hue */
+    height: 100vh; /* Set height to 100% of the viewport height */
+}
+
+/* Background image setting and styling */
+#first::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Making it Absolute positioning */
+    top: -20px; /* Move image up */
+    left: 0; /* Align to left edge similar to above for preferance */
+    height: calc(100% + 20px); 
+    width: 100%; /* Full width */
+    background-image: url(Toronto.jpg); /* Set background image froom html and files */
+    background-size: cover; /* Making image cover whole screen */
+    background-position: center; /* Background image centering */
+    filter: blur(5px); /* Apply  a nice blur effect to the image for aesthetics  */
+    z-index: -1; /* AMaking image further back for other content */
+}
+
+/* Styling for h1 elements in the home section */
+#first h1 {
+    display: block; /* Display as block element */
+    width: fit-content; /* Adjust width to fit content */
+    font-size: 4rem; /* Set font size */
+    position: relative; /* Positioning context for child elements */
+    color: white; /* Set text color to white */
+}
+
+/* Span styling within h1 elements */
+#first h1 span {
+    position: absolute; /* Position span absolutely within h1 */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    height: 100%; /* Full height of h1 */
+    width: 100%; /* Full width of h1 */
+}
+
+/* Call-to-action button styling for home page */
+#first .cta {
+    display: inline-block; /* Display as inline block */
+    padding: 10px 12px; /* Padding for button */
+    color: blue; /* Text color */
+    background-color: black; /* Button background color */
+    opacity: 0.7; /* Semi-transparent */
+    border: 2px solid blue; /* Border styling */
+    font-size: 2rem; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.1rem; /* Space between letters */
+    margin-top: 10px; /* Space above button */
+    margin-right: 15px; /* Space between buttons */
+    transition: 0.5s ease; /* Transition for hover effects */
+    transition-property: background-color, color; /* Properties for transition */
+}
+
+/* Hover effects for call-to-action buttons */
+#first .cta:hover {
+    color: black; /* Change text color on hover */
+    background-color: blue; /* Change background color on hover */
+}
+
+/* About Me section styling */
+#About {
+    position: relative; /* Positioning context for z-index layering */
+    z-index: 1; /* Layering order */
+    padding-left: 25px; /* Space between content and left edge */
+    justify-content: left; /* Align content to the left */
+    background-color: rgb(41, 131, 209); /* Background color */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    padding-top: 20px; /* Space above content */
+}
+
+/* Background image with blur effect for About section */
+#About::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Absolute positioning */
+    top: -20px; /* Move image up */
+    left: 0; /* Align to left edge */
+    height: calc(100% + 20px); /* Adjust height to compensate for move */
+    width: 100%; /* Full width */
+    background-image: url(Toronto.jpg); /* Set background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    filter: blur(5px); /* Apply blur effect */
+    z-index: -1; /* Position behind other content */
+}
+
+/* Flexbox container for video and paragraph in About section */
+.content-wrapper {
+    display: flex; /* Use flexbox layout */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 20px; /* Space between paragraph and video */
+    align-items: flex-start; /* Align items at the start */
+    padding-right: 2px; /* Add padding to the right */
+}
+
+/* Paragraph section styling in About section */
+.about-text {
+    max-width: 400px; /* Control maximum width */
+    color: white; /* Text color */
+}
+
+/* Title styling within About section */
+.paragraph-title {
+    font-size: 2rem; /* Font size */
+    color: white; /* Title color */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+/* Image styling for About section */
+.about-image {
+    width: 150px; /* Image width */
+    height: 150px; /* Image height */
+    border-radius: 50%; /* Circular image */
+    border: 2px solid blue; /* Add border to the image */
+    object-fit: cover; /* Ensure the image covers without distortion */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+/* Video styling for About section */
+.about-video {
+    width: 500px; /* Set video width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Display block for spacing */
+    border: 2px solid blue; /* Border around video */
+    opacity: 0.8; /* Slightly reduce opacity */
+}
+
+/* Video section wrapper styling */
+.about-video-wrapper {
+    margin-top: -145px; /* Pull video up */
+    margin-right: 20px; /* Space to the right */
+}
+
+/* Heading styling in About section */
+#About h1 {
+    display: block; /* Display as block element */
+    width: fit-content; /* Adjust width to fit content */
+    font-size: 4rem; /* Set font size */
+    position: relative; /* Positioning context */
+    color: white; /* Set text color to white */
+    margin-bottom: 30px; /* Space below heading */
+}
+
+/* Call-to-action button styling for About section */
+#About .cta {
+    display: inline-block; /* Display as inline block */
+    padding: 10px 12px; /* Button padding */
+    color: blue; /* Text color */
+    background-color: black; /* Button background color */
+    border: 2px solid blue; /* Border styling */
+    font-size: 2rem; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.1rem; /* Space between letters */
+    margin-top: 10px; /* Space above button */
+    margin-right: 15px; /* Space between buttons */
+    transition: 0.5s ease; /* Transition for hover effects */
+    transition-property: background-color, color; /* Properties for transition */
+}
+
+/* Hover effects for About section buttons */
+#About .cta:hover {
+    color: black; /* Change text color on hover */
+    background-color: blue; /* Change background color on hover */
+}
+
+/* Contact Me section styling */
+#contactMe {
+    position: relative; /* Positioning context for z-index layering */
+    z-index: 1; /* Layering order */
+    padding-left: 25px; /* Space between content and left edge */
+    justify-content: left; /* Align content to the left */
+    background-color: rgb(41, 131, 209); /* Background color */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    padding-top: 20px; /* Space above content */
+}
+
+/* Background image with blur effect for Contact Me section */
+#contactMe::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Absolute positioning */
+    top: -20px; /* Move image up */
+    left: 0; /* Align to left edge */
+    height: calc(100% + 20px); /* Adjust height to compensate for move */
+    width: 100%; /* Full width */
+    background-image: url(Toronto.jpg); /* Set background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    filter: blur(5px); /* Apply blur effect */
+    z-index: -1; /* Position behind other content */
+}
+
+/* Call-to-action button styling for Contact Me section */
+#contactMe .cta {
+    display: inline-block; /* Display as inline block */
+    padding: 10px 12px; /* Button padding */
+    color: blue; /* Text color */
+    background-color: black; /* Button background color */
+    border: 2px solid blue; /* Border styling */
+    font-size: 2rem; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.1rem; /* Space between letters */
+    margin-top: 10px; /* Space above button */
+    margin-right: 15px; /* Space between buttons */
+    transition: 0.5s ease; /* Transition for hover effects */
+    transition-property: background-color, color; /* Properties for transition */
+}
+
+/* Hover effects for Contact Me section buttons */
+#contactMe .cta:hover {
+    color: black; /* Change text color on hover */
+    background-color: blue; /* Change background color on hover */
+}
+
+/* Heading styling in Contact Me section */
+#contactMe h1 {
+    display: block; /* Display as block element */
+    width: fit-content; /* Adjust width to fit content */
+    font-size: 4rem; /* Set font size */
+    position: relative; /* Positioning context */
+    color: white; /* Set text color to white */
+    margin-bottom: 30px; /* Space below heading */
+}
+
+/* Contact Form styling */
+.contact-form {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    max-width: 400px; /* Control maximum width of the form */
+    margin-top: 20px; /* Space above the form */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+/* Label styling in the contact form */
+label {
+    font-size: 1.2rem; /* Font size for labels */
+    color: white; /* Label color */
+    margin-bottom: 5px; /* Space below the label */
+}
+
+/* Input and textarea styling */
+input, textarea {
+    padding: 10px; /* Padding for input and textarea */
+    font-size: 1rem; /* Font size */
+    border: 1px solid blue; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+}
+
+/* Focus styling for input and textarea */
+input:focus, textarea:focus {
+    outline: none; /* Remove default outline */
+    border-color: blue; /* Change border color on focus */
+}
+
+/* Submit button styling */
+.submit-btn {
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1rem; /* Font size */
+    color: white; /* Text color */
+    background-color: blue; /* Background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+/* Hover effects for submit button */
+.submit-btn:hover {
+    background-color: darkblue; /* Change background color on hover */
+}
+
+/* Projects section styling */
+#Projects {
+    position: relative; /* Positioning context for z-index layering */
+    z-index: 1; /* Layering order */
+    padding-left: 25px; /* Space between content and left edge */
+    justify-content: left; /* Align content to the left */
+    background-color: rgb(41, 131, 209); /* Background color */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    padding-top: 20px; /* Space above content */
+}
+
+/* Background image with blur effect for Projects section */
+#Projects::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Absolute positioning */
+    top: -20px; /* Move image up */
+    left: 0; /* Align to left edge */
+    height: calc(100% + 20px); /* Adjust height to compensate for move */
+    width: 100%; /* Full width */
+    background-image: url(Toronto.jpg); /* Set background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    filter: blur(5px); /* Apply blur effect */
+    z-index: -1; /* Position behind other content */
+}
+
+/* Call-to-action button styling for Projects section */
+#Projects .cta {
+    display: inline-block; /* Display as inline block */
+    padding: 10px 12px; /* Button padding */
+    color: blue; /* Text color */
+    background-color: black; /* Button background color */
+    border: 2px solid blue; /* Border styling */
+    font-size: 2rem; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.1rem; /* Space between letters */
+    margin-top: 10px; /* Space above button */
+    margin-right: 15px; /* Space between buttons */
+    transition: 0.5s ease; /* Transition for hover effects */
+    transition-property: background-color, color; /* Properties for transition */
+}
+
+/* Hover effects for Projects section buttons */
+#Projects .cta:hover {
+    color: black; /* Change text color on hover */
+    background-color: blue; /* Change background color on hover */
+}
+
+/* Heading styling in Projects section */
+#Projects h1 {
+    display: block; /* Display as block element */
+    width: fit-content; /* Adjust width to fit content */
+    font-size: 4rem; /* Set font size */
+    position: relative; /* Positioning context */
+    color: white; /* Set text color to white */
+    margin-bottom: 30px; /* Space below heading */
+}
+
+/* Flex container for project descriptions */
+.project-container {
+    display: flex; /* Enable flexbox */
+    gap: 20px; /* Space between project descriptions */
+}
+
+/* Styling for project description */
+.project-description {
+    max-width: 350px; /* Control maximum width */
+    padding: 0px; /* Add padding for spacing */
+    margin: 0; /* Remove margin */
+}
+
+/* Styling for program images */
+.program-image {
+    width: 350px; /* Set width for images */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid blue; /* Border around images */
+    margin-top: 10px; /* Space above image */
+    margin-left: 0; /* Align to left */
+    display: block; /* Display as block */
+}
+
+/* Text color for project descriptions */
+.project-text {
+    color: white; /* Set text color to white */
+}
+
+/* Title styling for project descriptions */
+.project-title {
+    color: white; /* Title color */
+    font-size: 2.5rem; /* Font size */
+    margin-bottom: 10px; /* Space below title */
+}
+
+/* Footer styling */
+footer {
+    background-color: black; /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; /* Center the text in the footer */
+    padding: 20px 0; /* Add padding above and below the text */
+    position: relative; /* Keep footer position relative */
+    bottom: 0; /* keep footer stuck at the bottom */
+    width: 100%; /* Let it take up whole screen */
+}
+
+/* Link styling within footer */
+.footer-content a {
+    color: #00aaff; /* Link color  */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effects for footer links */
+.footer-content a:hover {
+    text-decoration: underline; /* Add underline on hover of email */
+}
+/* End of Style.CSS */
